@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap");
+
+:root {
+  --background: #000;
+  --text-color: #fff;
+  --button: #8257e5;
+  --button-hover: #6845b9;
+  --border: #29292e;
+  --border-menu-mobile: #a8a8b3;
+  --text-color-menu-mobile: #e1e1e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+
+header {
+  margin: 3.125rem auto;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+}
+
+img.logo {
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: -2.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 0.95em;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background: var(--button);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.2s ease-in-out;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+a button {
+  width: 180px;
+  height: 45px;
+  background: transparent;
+  border: 2px solid var(--button);
+  border-radius: 6px;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  line-height: 15px;
+  color: var(--text-color);
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.688rem;
+  padding: 0 2.188rem;
+  position: relative;
+  z-index: 1;
+}
+
+a button:hover {
+  background: var(--button-hover);
+  border: none;
+}
+
+/* MENU TOGGLE */
+
+#btn-mobile {
+  display: none;
+}
+
+/* MAIN */
+
+.main {
+  display: grid;
+  color: var(--text-color);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.main h1 {
+  font-weight: 700;
+  font-size: 5rem;
+}
+
+.main h1.code {
+  color: var(--background);
+  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button),
+    -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+
+.main h1.code::before {
+  content: "<";
+}
+
+.main h1.code::after {
+  content: "/>";
+}
+
+.main img {
+  max-width: 100%;
+}
+
+div#circle-top {
+  width: 321px;
+  height: 321px;
+  background-color: var(--button);
+  filter: blur(200px);
+  right: 0;
+  top: -20%;
+  position: absolute;
+  z-index: 0;
+}
+
+div#circle-bottom {
+  width: 321px;
+  height: 321px;
+  background-color: var(--button);
+  filter: blur(200px);
+  margin-left: -10%;
+  bottom: 0;
+  margin-top: -30%;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0 3rem;
+  }
+
+  img.logo {
+    width: 40px;
+  }
+
+  nav ul li a::after,
+  nav ul li a:hover::after {
+    display: none;
+  }
+
+  #btn-mobile {
+    display: flex;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    margin-top: 20px;
+    z-index: 1001;
+
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #hamburger {
+    color: var(--text-color);
+    display: block;
+    border-top: 2px solid;
+    width: 20px;
+  }
+
+  #hamburger::after,
+  #hamburger::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+  #menu {
+    display: block;
+    position: absolute;
+    margin-top: -8rem;
+    width: 100%;
+    right: 0px;
+    background-color: var(--button);
+    height: 0px;
+    transition: 0.1s;
+    visibility: hidden;
+    overflow-y: hidden;
+    z-index: 1000;
+  }
+
+  #nav.active #menu {
+    height: calc(100vh + 300px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  #menu {
+    padding: 8rem 0;
+  }
+
+  #menu li {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  }
+
+  #menu li a {
+    color: var(--text-color);
+    font-size: 1.2em;
+    transition: 0.2s;
+  }
+
+  #menu li a:hover {
+    background: var(--background);
+    padding: 6px 6px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    padding: 0 6rem;
+  }
+}
