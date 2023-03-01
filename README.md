@@ -13,5 +13,5 @@
 </p>
 
 ## 📁 Project access
-You can access the project files by clicking [here](https://github.com/Coastony/dev-Sergio-Bueno)
+You can access the project files by clicking [here](https://github.com/Coastony/rocket_coffee)
 
