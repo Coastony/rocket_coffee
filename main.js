@@ -113,3 +113,17 @@ toggleDark.addEventListener("click", function () {
     btnMobile.style.color = "white";
   }
 });
+
+// Scroll Reveal
+
+ScrollReveal({
+  // reset: true,
+  distance: '60px',
+  duration: 2500,
+  delay: 400
+});
+
+ScrollReveal().reveal('.logo', { delay: 500, origin: 'left'});
+ScrollReveal().reveal('#great_coffee', { delay: 500, origin: 'left'});
+ScrollReveal().reveal('#great_code', { delay: 500, origin: 'right'});
+ScrollReveal().reveal('#two_coffee', { delay: 500, origin: 'bottom'});
