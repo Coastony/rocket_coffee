@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rocket Coffee</title>
     <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
   </head>
   <body>
     <header>
       <div class="header">
-        <img
-          class="logo"
-          src="assets/logo-desktop.svg"
-          alt="Logo Rocketseat"
-        />
-        <a href="#" class="get_coffee"><button>Pegar meu café</button></a>
+        <img class="logo" src="assets/logo-desktop.svg" alt="Logo Rocketseat" />
+        <a href="#" class="get_coffee"><button id="button">Pegar meu café</button></a>
       </div>
+      <i id="toggleDark" class="bi bi-brightness-high"></i>
       <nav id="nav">
         <button
           id="btn-mobile"
@@ -28,19 +30,19 @@
           <span id="hamburger"></span>
         </button>
         <ul id="menu" role="menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#recompensas">Recompensas</a></li>
-          <li><a href="#gifts">Gift Cards</a></li>
-          <li><a href="#stores">Lojas</a></li>
+          <li><a id="link1" href="#home">Home</a></li>
+          <li><a id="link2" href="#menu">Menu</a></li>
+          <li><a id="link3" href="#recompensas">Recompensas</a></li>
+          <li><a id="link4" href="#gifts">Gift Cards</a></li>
+          <li><a id="link5" href="#stores">Lojas</a></li>
         </ul>
       </nav>
       <div id="circle-top"></div>
     </header>
     <main>
       <div class="main">
-        <h1>Great Coffee</h1>
-        <h1 class="code">Great Code</h1>
+        <h1 id="great_coffee">Great Coffee</h1>
+        <h1 id="great_code" class="code">Great Code</h1>
         <img src="assets/img_coffee.svg" alt="Rocket Coffee" />
       </div>
     </main>
