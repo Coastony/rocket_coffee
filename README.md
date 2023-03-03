@@ -9,7 +9,7 @@
 <br>
 
 <p align="center">
- <img src="assets/rocket_coffee.png" width="550" alt="Image project">
+ <img src="assets/rocket_coffee2.png" width="550" alt="Image project">
 </p>
 
 ## 📁 Project access
