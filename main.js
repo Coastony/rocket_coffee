@@ -1,5 +1,6 @@
 const btnMobile = document.getElementById("btn-mobile");
 
+// Toggle nav
 function toggleMenu(event) {
   if (event.type === "touchstart") event.preventDefault();
 
@@ -18,3 +19,97 @@ function toggleMenu(event) {
 
 btnMobile.addEventListener("click", toggleMenu);
 btnMobile.addEventListener("touchstart", toggleMenu);
+
+// toggleDark
+const toggleDark = document.getElementById("toggleDark");
+const body = document.querySelector("body");
+
+toggleDark.addEventListener("click", function () {
+  this.classList.toggle("bi-moon");
+
+  if (this.classList.toggle("bi-brightness-high-fill")) {
+    body.style.background = "white";
+    body.style.color = "black";
+    body.style.transition = "2s";
+
+    // Great Coffee
+    GreatCoffee = document.getElementById("great_coffee");
+    GreatCoffee.style.color = "black";
+    GreatCoffee.style.transition = "2s";
+
+    // nav style
+    navStyle = document.getElementById("link1");
+    navStyle.style.color = "black";
+    navStyle.style.transition = "2s";
+
+    navStyle = document.getElementById("link2");
+    navStyle.style.color = "black";
+    navStyle.style.transition = "2s";
+
+    navStyle = document.getElementById("link3");
+    navStyle.style.color = "black";
+    navStyle.style.transition = "2s";
+
+    navStyle = document.getElementById("link4");
+    navStyle.style.color = "black";
+    navStyle.style.transition = "2s";
+
+    navStyle = document.getElementById("link5");
+    navStyle.style.color = "black";
+    navStyle.style.transition = "2s";
+
+    // button
+    buttonNav = document.getElementById("button");
+    buttonNav.style.color = "black";
+
+    // toggleDark
+    toggleDark = document.getElementById("toggleDark");
+    toggleDark.style.background = "black";
+
+    // btnMobile
+    btnMobile = document.getElementById("hamburger");
+    btnMobile.style.color = "black";
+  } else {
+    body.style.background = "black";
+    body.style.color = "white";
+    body.style.transition = "2s";
+
+    // Great Coffee
+    GreatCoffee = document.getElementById("great_coffee");
+    GreatCoffee.style.color = "white";
+    GreatCoffee.style.transition = "2s";
+
+    // nav style
+    navStyle = document.getElementById("link1");
+    navStyle.style.color = "white";
+    navStyle.style.transition = "2s";
+
+    navStyle = document.getElementById("link2");
+    navStyle.style.color = "white";
+    navStyle.style.transition = "2s";
+
+    navStyle = document.getElementById("link3");
+    navStyle.style.color = "white";
+    navStyle.style.transition = "2s";
+
+    navStyle = document.getElementById("link4");
+    navStyle.style.color = "white";
+    navStyle.style.transition = "2s";
+
+    navStyle = document.getElementById("link5");
+    navStyle.style.color = "white";
+    navStyle.style.transition = "2s";
+
+    // button
+    buttonNav = document.getElementById("button");
+    buttonNav.style.color = "white";
+
+    // toggleDark
+    toggleDark = document.getElementById("toggleDark");
+    toggleDark.style.color = "white";
+    
+    // btnMobile
+    btnMobile = document.getElementById("hamburger");
+    btnMobile.style.color = "white";
+  }
+});
