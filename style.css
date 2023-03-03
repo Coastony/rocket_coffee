@@ -48,6 +48,16 @@ img.logo {
   cursor: pointer;
 }
 
+#toggleDark {
+  font-size: 30px;
+  color: var(--text-color);
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  margin: 1rem 2rem;
+  z-index: 5;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -244,7 +254,7 @@ div#circle-bottom {
   }
 
   #nav.active #menu {
-    height: calc(100vh + 300px);
+    height: calc(100vh + 290px);
     visibility: visible;
     overflow-y: auto;
   }
@@ -269,6 +279,10 @@ div#circle-bottom {
     background: var(--background);
     padding: 6px 6px;
     border-radius: 10px;
+  }
+
+  #toggleDark {
+    margin-right: 70px;
   }
 }
 
